@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Udemy\\CodePulse\\API\\CodePulse.API\\CodePulse.API\\CodePulse.API.csproj": {}
+    "E:\\CourseProjects\\AngularTraining\\API\\CodePulse.API\\CodePulse.API\\CodePulse.API.csproj": {}
   },
   "projects": {
-    "D:\\Udemy\\CodePulse\\API\\CodePulse.API\\CodePulse.API\\CodePulse.API.csproj": {
+    "E:\\CourseProjects\\AngularTraining\\API\\CodePulse.API\\CodePulse.API\\CodePulse.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Udemy\\CodePulse\\API\\CodePulse.API\\CodePulse.API\\CodePulse.API.csproj",
+        "projectUniqueName": "E:\\CourseProjects\\AngularTraining\\API\\CodePulse.API\\CodePulse.API\\CodePulse.API.csproj",
         "projectName": "CodePulse.API",
-        "projectPath": "D:\\Udemy\\CodePulse\\API\\CodePulse.API\\CodePulse.API\\CodePulse.API.csproj",
-        "packagesPath": "C:\\Users\\5520\\.nuget\\packages\\",
-        "outputPath": "D:\\Udemy\\CodePulse\\API\\CodePulse.API\\CodePulse.API\\obj\\",
+        "projectPath": "E:\\CourseProjects\\AngularTraining\\API\\CodePulse.API\\CodePulse.API\\CodePulse.API.csproj",
+        "packagesPath": "C:\\Users\\coeus\\.nuget\\packages\\",
+        "outputPath": "E:\\CourseProjects\\AngularTraining\\API\\CodePulse.API\\CodePulse.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\5520\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\coeus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,9 +25,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Development\\Dev House\\sf packages\\sf packages": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "E:\\Office Work\\ContoWorks Packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://ob.pkgs.visualstudio.com/Contoworks-Common/_packaging/Telerik%40Local/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -100,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
