@@ -17,7 +17,7 @@ namespace CodePulse.API.Tests
 
         public CategoriesControllerTests()
         {
-                categoryRepository = new Mock<ICategoryRepository>();
+            categoryRepository = new Mock<ICategoryRepository>();
             logger = new Mock<ILogger<CategoriesController>>();
         }
 

@@ -1,4 +1,5 @@
 using CodePulse.API.Data;
+using CodePulse.API.Models.Mapping;
 using CodePulse.API.Repositories.Implementation;
 using CodePulse.API.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
@@ -12,8 +13,9 @@ builder.Host.UseSerilog((context,configuration) =>
 });
 
 // Add services to the container.
-builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(CodePulseAPIMappingProfile));
 builder.Services.AddControllersWithViews();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
