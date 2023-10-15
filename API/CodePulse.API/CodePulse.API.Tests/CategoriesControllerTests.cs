@@ -24,6 +24,7 @@ namespace CodePulse.API.Tests
         [Fact]
         public void getAllCategories_Logic()
         {
+            // this is act 
             // Arrange 
             //var cateogriesController = new CategoriesController(categoryRepository,logger);
 
