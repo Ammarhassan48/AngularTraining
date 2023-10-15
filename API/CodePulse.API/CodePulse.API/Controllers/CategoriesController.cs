@@ -15,7 +15,7 @@ namespace CodePulse.API.Controllers
     {
         private readonly ICategoryRepository categoryRepository;
         private readonly ILogger<CategoriesController> _logger;
-        private readonly IMapper _mapper;
+        private readonly IMapper _mapper; // Updated mapper library
 
         public CategoriesController(ICategoryRepository categoryRepository,
             ILogger<CategoriesController> logger,IMapper mapper)
@@ -29,6 +29,8 @@ namespace CodePulse.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
         {
+            _logger.LogInformation("CreateCategory Action invoked");
+
             Category category = new Category
             {
                 Name = request.Name,
