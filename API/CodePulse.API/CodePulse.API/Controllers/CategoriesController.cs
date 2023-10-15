@@ -15,6 +15,7 @@ namespace CodePulse.API.Controllers
     {
         private readonly ICategoryRepository categoryRepository;
         private readonly ILogger<CategoriesController> _logger;
+        
         private readonly IMapper _mapper; // Updated mapper library
 
         public CategoriesController(ICategoryRepository categoryRepository,
