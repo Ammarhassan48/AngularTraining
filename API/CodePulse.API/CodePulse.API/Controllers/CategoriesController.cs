@@ -1,4 +1,5 @@
-﻿using CodePulse.API.Data;
+﻿using AutoMapper;
+using CodePulse.API.Data;
 using CodePulse.API.Models.Domain;
 using CodePulse.API.Models.DTO;
 using CodePulse.API.Repositories.Interface;
@@ -14,12 +15,14 @@ namespace CodePulse.API.Controllers
     {
         private readonly ICategoryRepository categoryRepository;
         private readonly ILogger<CategoriesController> _logger;
+        private readonly IMapper _mapper;
 
         public CategoriesController(ICategoryRepository categoryRepository,
-            ILogger<CategoriesController> logger)
+            ILogger<CategoriesController> logger,IMapper mapper)
         {
             this.categoryRepository = categoryRepository;
             this._logger = logger;
+            this._mapper = mapper;
             _logger.LogInformation("Categories Controller called");
         }
 
@@ -59,12 +62,7 @@ namespace CodePulse.API.Controllers
 
             foreach (var cateogory in categories)
             {
-                response.Add(new CategoryDto
-                {
-                    Id= cateogory.Id,
-                    Name = cateogory.Name,
-                    UrlHandle = cateogory.UrlHandle
-                });
+                response.Add(_mapper.Map<CategoryDto>(cateogory));
             }
 
             return Ok(response);
