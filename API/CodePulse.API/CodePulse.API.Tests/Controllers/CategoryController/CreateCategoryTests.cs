@@ -16,13 +16,13 @@ namespace CodePulse.API.Tests.Controllers.CategoryController
 {
     public class CreateCategoryTests
     {
-        private readonly Mock<ICategoryRepository> categoryRepository;
+        private readonly Mock<ICategoryRepository> categoryRepositoryMoq;
         private readonly Mock<ILogger<CategoriesController>> logger;
         private readonly Mock<IMapper> mapper;
 
         public CreateCategoryTests()
         {
-            categoryRepository = new Mock<ICategoryRepository>();
+            categoryRepositoryMoq = new Mock<ICategoryRepository>(); // Normal Mock of service
             logger = new Mock<ILogger<CategoriesController>>();
             mapper = new Mock<IMapper>();
         }
@@ -33,9 +33,11 @@ namespace CodePulse.API.Tests.Controllers.CategoryController
             // Arrange
             Category category = GetCategoryObject();       
             
-            categoryRepository.Setup(x=>x.CreateAsync(category)).Returns(Task.FromResult(category));
-            
-            CategoriesController categoriesController = new CategoriesController(categoryRepository.Object, logger.Object, mapper.Object);
+            categoryRepositoryMoq.Setup(x=>x.CreateAsync(category)).Returns(Task.FromResult(category));
+        
+            var LazyCategoryRepositoryService = new Lazy<ICategoryRepository>(categoryRepositoryMoq.Object); // Prepare Lazy Mock
+
+            CategoriesController categoriesController = new CategoriesController(LazyCategoryRepositoryService, logger.Object, mapper.Object);
             
             CreateCategoryRequestDto createCategoryRequestDto = GetCreateCategoryRequestDtoObject();
            
